@@ -26,12 +26,7 @@ public class registerService {
         Random r = new Random();
         int code = r.nextInt(899999) + 100000;
         MailAccount account = new MailAccount();
-        account.setHost("smtp.qq.com");
-        account.setPort(465);
-        account.setAuth(true);
-        account.setFrom("479156530@qq.com");
-        account.setUser("479156530");
-        account.setPass("wasvwjlkdknqbijf");
+
         account.setSslEnable(true);
         String content = "<h1>您的验证码为：" + code + "</h1>";
         MailUtil.send(account, email.getEmail(), "注册SevenMusic", content, false);
