@@ -9,6 +9,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class RegUser {
     private String email;
-    private Integer code;
     private String password;
+    private Integer code;
 }

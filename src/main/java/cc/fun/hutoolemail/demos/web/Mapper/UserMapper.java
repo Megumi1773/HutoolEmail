@@ -6,9 +6,11 @@ import org.apache.ibatis.annotations.*;
 
 @Mapper
 public interface UserMapper {
-    @Select("Select count(*)from user where username=#{username} and password=#{password}")
-    int Login(LoginUser u);
+    @Select("SELECT * FROM user WHERE username = #{username}")
+    User findByUsername(String username);
 
+    @Select("SELECT * FROM user WHERE username = #{username} AND password = #{password}")
+    User login(LoginUser u);
 
     //    注册账号
     @Insert("insert into user(username,password) values(#{username},#{password})")

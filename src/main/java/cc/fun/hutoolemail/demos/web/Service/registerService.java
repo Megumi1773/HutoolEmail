@@ -2,6 +2,7 @@ package cc.fun.hutoolemail.demos.web.Service;
 
 import cc.fun.hutoolemail.demos.web.DTO.GetCodeEmail;
 import cc.fun.hutoolemail.demos.web.DTO.RegUser;
+import cc.fun.hutoolemail.demos.web.Entity.User;
 import cc.fun.hutoolemail.demos.web.Entity.vEmail;
 import cc.fun.hutoolemail.demos.web.Mapper.RegisterMapper;
 import cc.fun.hutoolemail.demos.web.Mapper.UserMapper;
@@ -12,6 +13,7 @@ import cn.hutool.extra.mail.MailUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 
@@ -28,10 +30,27 @@ public class registerService {
         MailAccount account = new MailAccount();
 
         account.setSslEnable(true);
-        String content = "<h1>您的验证码为：" + code + "</h1>";
-        MailUtil.send(account, email.getEmail(), "注册SevenMusic", content, false);
+        String content = "<div style=\"max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; background-color: #f8f9fa; border-radius: 10px;\">" +
+                "<div style=\"text-align: center; padding: 20px; background-color: #4CAF50; border-radius: 8px 8px 0 0;\">" +
+                "<h1 style=\"color: white; margin: 0; font-size: 24px;\">🎉 欢迎加入 SevenMusic 🎉</h1>" +
+                "</div>" +
+                "<div style=\"padding: 30px; background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);\">" +
+                "<p style=\"font-size: 16px; color: #333; line-height: 1.6;\">亲爱的用户：</p>" +
+                "<p style=\"font-size: 16px; color: #333; line-height: 1.6;\">感谢您注册 SevenMusic！您的验证码是：</p>" +
+                "<div style=\"background-color: #f8f9fa; padding: 15px; border-radius: 5px; text-align: center; margin: 20px 0;\">" +
+                "<span style=\"font-size: 24px; font-weight: bold; color: #4CAF50; letter-spacing: 5px;\">" + code + "</span>" +
+                "</div>" +
+                "<p style=\"font-size: 14px; color: #666; line-height: 1.6;\">验证码有效期为5分钟，请尽快完成注册。</p>" +
+                "<div style=\"margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;\">" +
+                "<p style=\"font-size: 14px; color: #666; margin: 0;\">祝您使用愉快！</p>" +
+                "<p style=\"font-size: 14px; color: #666; margin: 5px 0 0 0;\">SevenMusic 团队</p>" +
+                "</div>" +
+                "</div>" +
+                "</div>";
+        MailUtil.send(account, email.getEmail(), "注册SevenMusic", content, true);
         //现在时间
         DateTime now = DateTime.now();
+
         //保存验证码
         int c = registerMapper.SaveEmailCode(new vEmail(null, email.getEmail(), code, now));
         if (c == 0) {
@@ -42,11 +61,46 @@ public class registerService {
     }
 
     public Result<String> RegAccount(RegUser ru) {
-        vEmail e = registerMapper.GetEmailCode(ru);
+        vEmail e = registerMapper.GetEmailCode(ru.getCode());
         if (!Objects.equals(e.getCode(), ru.getCode())) {
             return Result.error("验证码错误");
         }
+        List<User> list = registerMapper.GetAllEmailCode();
+        for (User vEmail : list) {
+            if (vEmail.getUsername().equals(ru.getEmail())) {
+                return Result.error("邮箱已注册,请直接登入");
+            }
+        }
         int c = userMapper.Register(ru.getEmail(), ru.getPassword());
+        if (c == 1) {
+            MailAccount account = new MailAccount();
+
+            account.setSslEnable(true);
+            String content = "<div style=\"max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; background-color: #f8f9fa; border-radius: 10px;\">" +
+                    "<div style=\"text-align: center; padding: 20px; background-color: #4CAF50; border-radius: 8px 8px 0 0;\">" +
+                    "<h1 style=\"color: white; margin: 0; font-size: 24px;\">🎉 注册成功 🎉</h1>" +
+                    "</div>" +
+                    "<div style=\"padding: 30px; background-color: white; border-radius: 0 0 8px 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);\">" +
+                    "<p style=\"font-size: 16px; color: #333; line-height: 1.6;\">亲爱的用户：</p>" +
+                    "<p style=\"font-size: 16px; color: #333; line-height: 1.6;\">恭喜您成功注册 SevenMusic！</p>" +
+                    "<div style=\"background-color: #f8f9fa; padding: 15px; border-radius: 5px; margin: 20px 0;\">" +
+                    "<p style=\"font-size: 16px; color: #333; margin: 0;\">您的账号信息：</p>" +
+                    "<p style=\"font-size: 14px; color: #666; margin: 10px 0 0 0;\">邮箱：" + ru.getEmail() + "</p>" +
+                    "</div>" +
+                    "<p style=\"font-size: 14px; color: #666; line-height: 1.6;\">现在您可以：</p>" +
+                    "<ul style=\"font-size: 14px; color: #666; line-height: 1.6; padding-left: 20px;\">" +
+                    "<li>登录您的账号</li>" +
+                    "<li>完善个人资料</li>" +
+                    "<li>开始探索音乐世界</li>" +
+                    "</ul>" +
+                    "<div style=\"margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee;\">" +
+                    "<p style=\"font-size: 14px; color: #666; margin: 0;\">祝您使用愉快！</p>" +
+                    "<p style=\"font-size: 14px; color: #666; margin: 5px 0 0 0;\">SevenMusic 团队</p>" +
+                    "</div>" +
+                    "</div>" +
+                    "</div>";
+            MailUtil.send(account, ru.getEmail(), "注册成功 - SevenMusic", content, true);
+        }
         return Result.success("注册成功");
     }
 }
