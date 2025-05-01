@@ -1,10 +1,12 @@
 package cc.fun.hutoolemail.demos.web.Config;
 
+import org.apache.ibatis.annotations.Insert;
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 @Configurable
 public class CrocssConfig {
+
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedOrigins("*")

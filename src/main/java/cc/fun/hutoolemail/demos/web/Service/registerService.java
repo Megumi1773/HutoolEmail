@@ -7,29 +7,32 @@ import cc.fun.hutoolemail.demos.web.Entity.vEmail;
 import cc.fun.hutoolemail.demos.web.Mapper.RegisterMapper;
 import cc.fun.hutoolemail.demos.web.Mapper.UserMapper;
 import cc.fun.hutoolemail.demos.web.Misc.Result;
-import cn.hutool.core.date.DateTime;
 import cn.hutool.extra.mail.MailAccount;
 import cn.hutool.extra.mail.MailUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 
 @Service
 public class registerService {
+    private final RegisterMapper registerMapper;
+    private final UserMapper userMapper;
+
     @Autowired
-    private RegisterMapper registerMapper;
-    @Autowired
-    private UserMapper userMapper;
+    public registerService(RegisterMapper registerMapper, UserMapper userMapper) {
+        this.registerMapper = registerMapper;
+        this.userMapper = userMapper;
+    }
 
     public Result<String> sendMail(GetCodeEmail email) {
         Random r = new Random();
         int code = r.nextInt(899999) + 100000;
-        MailAccount account = new MailAccount();
-
-        account.setSslEnable(true);
         String content = "<div style=\"max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; background-color: #f8f9fa; border-radius: 10px;\">" +
                 "<div style=\"text-align: center; padding: 20px; background-color: #4CAF50; border-radius: 8px 8px 0 0;\">" +
                 "<h1 style=\"color: white; margin: 0; font-size: 24px;\">🎉 欢迎加入 SevenMusic 🎉</h1>" +
@@ -47,12 +50,15 @@ public class registerService {
                 "</div>" +
                 "</div>" +
                 "</div>";
-        MailUtil.send(account, email.getEmail(), "注册SevenMusic", content, true);
-        //现在时间
-        DateTime now = DateTime.now();
+        MailUtil.send(SmtpConfig(), email.getEmail(), "注册SevenMusic", content, true);
+        
+        // 使用LocalDateTime
+        LocalDateTime now = LocalDateTime.now();
+        Instant instant = now.atZone(ZoneId.systemDefault()).toInstant();
+        int time = (int) (instant.toEpochMilli() /1000);
 
         //保存验证码
-        int c = registerMapper.SaveEmailCode(new vEmail(null, email.getEmail(), code, now));
+        int c = registerMapper.SaveEmailCode(new vEmail(null, email.getEmail(), code, time));
         if (c == 0) {
             return Result.error("发送失败");
         }
@@ -61,21 +67,37 @@ public class registerService {
     }
 
     public Result<String> RegAccount(RegUser ru) {
-        vEmail e = registerMapper.GetEmailCode(ru.getCode());
+        vEmail e = registerMapper.GetEmailCode(ru.getCode(), ru.getEmail());
+        if (e == null) {
+            return Result.error("验证码不存在或已过期");
+        }
         if (!Objects.equals(e.getCode(), ru.getCode())) {
             return Result.error("验证码错误");
         }
-        List<User> list = registerMapper.GetAllEmailCode();
+        List<User> list = registerMapper.GetAllUser();
         for (User vEmail : list) {
             if (vEmail.getUsername().equals(ru.getEmail())) {
                 return Result.error("邮箱已注册,请直接登入");
             }
         }
+        
+        // 验证时效性（5分钟）
+        LocalDateTime now = LocalDateTime.now();
+        Instant instant = now.atZone(ZoneId.systemDefault()).toInstant();
+        int nowTime = (int) (instant.toEpochMilli() /1000);
+        long codeTime = e.getCreatedAt();
+        System.out.println("codeTime: " + codeTime);
+        System.out.println(e);
+        if (codeTime == 0){
+            return Result.error("验证码为空");
+        }
+        if(nowTime - codeTime > 300000){
+            return Result.error("验证码已过期，请重新获取");
+        }
+
+
         int c = userMapper.Register(ru.getEmail(), ru.getPassword());
         if (c == 1) {
-            MailAccount account = new MailAccount();
-
-            account.setSslEnable(true);
             String content = "<div style=\"max-width: 600px; margin: 0 auto; padding: 20px; font-family: Arial, sans-serif; background-color: #f8f9fa; border-radius: 10px;\">" +
                     "<div style=\"text-align: center; padding: 20px; background-color: #4CAF50; border-radius: 8px 8px 0 0;\">" +
                     "<h1 style=\"color: white; margin: 0; font-size: 24px;\">🎉 注册成功 🎉</h1>" +
@@ -99,8 +121,20 @@ public class registerService {
                     "</div>" +
                     "</div>" +
                     "</div>";
-            MailUtil.send(account, ru.getEmail(), "注册成功 - SevenMusic", content, true);
+            MailUtil.send(SmtpConfig(), ru.getEmail(), "注册成功 - SevenMusic", content, true);
         }
         return Result.success("注册成功");
+    }
+
+    private MailAccount SmtpConfig() {
+        MailAccount account = new MailAccount();
+        account.setHost("smtp.qq.com");
+        account.setPort(465);
+        account.setAuth(true);
+        account.setFrom("479156530@qq.com");
+        account.setUser("479156530");
+        account.setPass("wasvwjlkdknqbijf");
+        account.setSslEnable(true);
+        return account;
     }
 }

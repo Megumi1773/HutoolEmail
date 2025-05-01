@@ -13,12 +13,12 @@ import java.util.List;
 @Mapper
 public interface RegisterMapper {
     // 保存邮箱验证码
-    @Insert("insert into vemail(email,code,created_at) values(#{email},#{code},#{created_at})")
+    @Insert("insert into vemail(email,code,created_at) values(#{email},#{code},#{createdAt})")
     int SaveEmailCode(vEmail e);
 
-    @Select("select id, email, code, created_at from vemail where code = #{code}")
-    vEmail GetEmailCode(@Param("code") Integer code);
+    @Select("select * from vemail where code = #{code} and email = #{email} order by created_at desc limit 1")
+    vEmail GetEmailCode(@Param("code") Integer code, @Param("email") String email);
 
-    @Select("select id,username,id, username, password, created_at, updated_at from user")
-    List<User> GetAllEmailCode();
+    @Select("select id, username, password, created_at, updated_at from user")
+    List<User> GetAllUser();
 }

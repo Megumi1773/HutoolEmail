@@ -1,0 +1,112 @@
+2025-05-01 10:24:45.056 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2025-05-01 10:24:45.056 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'cc.fun.hutoolemail'
+2025-05-01 10:24:45.122 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\RegisterMapper.class]
+2025-05-01 10:24:45.122 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\UserMapper.class]
+2025-05-01 10:24:45.123 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'registerMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.RegisterMapper' mapperInterface
+2025-05-01 10:24:45.125 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.UserMapper' mapperInterface
+2025-05-01 10:24:45.759 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2025-05-01 10:26:16.887 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2025-05-01 10:26:16.888 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'cc.fun.hutoolemail'
+2025-05-01 10:26:16.953 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\RegisterMapper.class]
+2025-05-01 10:26:16.953 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\UserMapper.class]
+2025-05-01 10:26:16.955 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'registerMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.RegisterMapper' mapperInterface
+2025-05-01 10:26:16.956 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.UserMapper' mapperInterface
+2025-05-01 10:26:17.598 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2025-05-01 10:33:41.600 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2025-05-01 10:33:41.600 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'cc.fun.hutoolemail'
+2025-05-01 10:33:41.662 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\RegisterMapper.class]
+2025-05-01 10:33:41.662 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\UserMapper.class]
+2025-05-01 10:33:41.663 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'registerMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.RegisterMapper' mapperInterface
+2025-05-01 10:33:41.664 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.UserMapper' mapperInterface
+2025-05-01 10:33:42.324 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2025-05-01 10:37:35.040 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2025-05-01 10:37:35.040 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'cc.fun.hutoolemail'
+2025-05-01 10:37:35.107 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\RegisterMapper.class]
+2025-05-01 10:37:35.107 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\UserMapper.class]
+2025-05-01 10:37:35.108 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'registerMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.RegisterMapper' mapperInterface
+2025-05-01 10:37:35.110 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.UserMapper' mapperInterface
+2025-05-01 10:37:35.757 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2025-05-01 10:38:19.900 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2025-05-01 10:38:19.900 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'cc.fun.hutoolemail'
+2025-05-01 10:38:19.961 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\RegisterMapper.class]
+2025-05-01 10:38:19.961 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\UserMapper.class]
+2025-05-01 10:38:19.961 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'registerMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.RegisterMapper' mapperInterface
+2025-05-01 10:38:19.963 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.UserMapper' mapperInterface
+2025-05-01 10:38:20.630 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2025-05-01 10:39:10.353 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2025-05-01 10:39:10.353 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'cc.fun.hutoolemail'
+2025-05-01 10:39:10.413 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\RegisterMapper.class]
+2025-05-01 10:39:10.413 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\UserMapper.class]
+2025-05-01 10:39:10.413 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'registerMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.RegisterMapper' mapperInterface
+2025-05-01 10:39:10.414 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.UserMapper' mapperInterface
+2025-05-01 10:39:11.034 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2025-05-01 10:56:50.737 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2025-05-01 10:56:50.738 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'cc.fun.hutoolemail'
+2025-05-01 10:56:50.808 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\RegisterMapper.class]
+2025-05-01 10:56:50.808 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\UserMapper.class]
+2025-05-01 10:56:50.808 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'registerMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.RegisterMapper' mapperInterface
+2025-05-01 10:56:50.810 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.UserMapper' mapperInterface
+2025-05-01 10:56:51.533 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2025-05-01 11:02:08.063 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2025-05-01 11:02:08.063 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'cc.fun.hutoolemail'
+2025-05-01 11:02:08.130 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\RegisterMapper.class]
+2025-05-01 11:02:08.130 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\UserMapper.class]
+2025-05-01 11:02:08.131 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'registerMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.RegisterMapper' mapperInterface
+2025-05-01 11:02:08.132 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.UserMapper' mapperInterface
+2025-05-01 11:02:08.785 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2025-05-01 11:05:42.862 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2025-05-01 11:05:42.862 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'cc.fun.hutoolemail'
+2025-05-01 11:05:42.926 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\RegisterMapper.class]
+2025-05-01 11:05:42.926 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\UserMapper.class]
+2025-05-01 11:05:42.927 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'registerMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.RegisterMapper' mapperInterface
+2025-05-01 11:05:42.928 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.UserMapper' mapperInterface
+2025-05-01 11:05:43.557 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2025-05-01 11:09:18.989 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2025-05-01 11:09:18.989 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'cc.fun.hutoolemail'
+2025-05-01 11:09:19.056 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\RegisterMapper.class]
+2025-05-01 11:09:19.056 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\UserMapper.class]
+2025-05-01 11:09:19.056 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'registerMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.RegisterMapper' mapperInterface
+2025-05-01 11:09:19.058 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.UserMapper' mapperInterface
+2025-05-01 11:09:19.756 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2025-05-01 11:12:00.098 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2025-05-01 11:12:00.099 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'cc.fun.hutoolemail'
+2025-05-01 11:12:00.177 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\RegisterMapper.class]
+2025-05-01 11:12:00.177 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\UserMapper.class]
+2025-05-01 11:12:00.177 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'registerMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.RegisterMapper' mapperInterface
+2025-05-01 11:12:00.180 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.UserMapper' mapperInterface
+2025-05-01 11:12:00.985 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2025-05-01 11:12:54.157 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2025-05-01 11:12:54.158 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'cc.fun.hutoolemail'
+2025-05-01 11:12:54.219 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\RegisterMapper.class]
+2025-05-01 11:12:54.219 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\UserMapper.class]
+2025-05-01 11:12:54.220 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'registerMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.RegisterMapper' mapperInterface
+2025-05-01 11:12:54.221 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.UserMapper' mapperInterface
+2025-05-01 11:12:54.839 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2025-05-01 11:15:11.634 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2025-05-01 11:15:11.634 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'cc.fun.hutoolemail'
+2025-05-01 11:15:11.704 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\RegisterMapper.class]
+2025-05-01 11:15:11.704 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\UserMapper.class]
+2025-05-01 11:15:11.705 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'registerMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.RegisterMapper' mapperInterface
+2025-05-01 11:15:11.706 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.UserMapper' mapperInterface
+2025-05-01 11:15:12.337 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2025-05-01 11:15:18.246 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2025-05-01 11:15:18.246 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'cc.fun.hutoolemail'
+2025-05-01 11:15:18.317 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\RegisterMapper.class]
+2025-05-01 11:15:18.317 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\UserMapper.class]
+2025-05-01 11:15:18.318 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'registerMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.RegisterMapper' mapperInterface
+2025-05-01 11:15:18.319 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.UserMapper' mapperInterface
+2025-05-01 11:15:18.948 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2025-05-01 11:19:28.631 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2025-05-01 11:19:28.632 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'cc.fun.hutoolemail'
+2025-05-01 11:19:28.695 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\RegisterMapper.class]
+2025-05-01 11:19:28.695 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\UserMapper.class]
+2025-05-01 11:19:28.695 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'registerMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.RegisterMapper' mapperInterface
+2025-05-01 11:19:28.696 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.UserMapper' mapperInterface
+2025-05-01 11:19:29.333 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.
+2025-05-01 11:22:15.219 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Searching for mappers annotated with @Mapper
+2025-05-01 11:22:15.219 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Using auto-configuration base package 'cc.fun.hutoolemail'
+2025-05-01 11:22:15.280 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\RegisterMapper.class]
+2025-05-01 11:22:15.280 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Identified candidate component class: file [D:\JavaItems\HutoolEmail\target\classes\cc\fun\hutoolemail\demos\web\Mapper\UserMapper.class]
+2025-05-01 11:22:15.281 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'registerMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.RegisterMapper' mapperInterface
+2025-05-01 11:22:15.282 [main] DEBUG o.m.s.mapper.ClassPathMapperScanner - Creating MapperFactoryBean with name 'userMapper' and 'cc.fun.hutoolemail.demos.web.Mapper.UserMapper' mapperInterface
+2025-05-01 11:22:15.914 [main] DEBUG o.m.s.b.a.MybatisAutoConfiguration - Not found configuration for registering mapper bean using @MapperScan, MapperFactoryBean and MapperScannerConfigurer.

@@ -1,9 +1,10 @@
 package cc.fun.hutoolemail.demos.web.Entity;
 
-import cn.hutool.core.date.DateTime;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.time.LocalDateTime;
 
 @Data
 @AllArgsConstructor
@@ -12,6 +13,6 @@ public class User {
     private Integer id;
     private String username;
     private String password;
-    private DateTime created_at;
-    private DateTime updated_at;
+    private LocalDateTime createdAt;
+    private LocalDateTime updated_at;
 }
