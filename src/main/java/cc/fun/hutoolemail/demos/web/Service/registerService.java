@@ -128,13 +128,7 @@ public class registerService {
 
     private MailAccount SmtpConfig() {
         MailAccount account = new MailAccount();
-        account.setHost("smtp.qq.com");
-        account.setPort(465);
-        account.setAuth(true);
-        account.setFrom("479156530@qq.com");
-        account.setUser("479156530");
-        account.setPass("wasvwjlkdknqbijf");
-        account.setSslEnable(true);
+
         return account;
     }
 }
